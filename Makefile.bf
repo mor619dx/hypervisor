@@ -95,6 +95,7 @@ include %HYPER_ABS%/common/common_subdir.mk
 .PHONY: astyle
 .PHONY: astyle_clean
 .PHONY: doxygen
+.PHONY: doxygen_cygwin
 .PHONY: doxygen_clean
 .PHONY: test
 
@@ -167,6 +168,10 @@ astyle_clean:
 doxygen:
 	@cd %HYPER_ABS%; \
 	%HYPER_ABS%/tools/doxygen/linux/run.sh
+
+doxygen_cygwin:
+	@cd %HYPER_ABS%; \
+	%HYPER_ABS%/tools/doxygen/cygwin/run.sh
 
 doxygen_clean:
 	@cd %HYPER_ABS%; \
